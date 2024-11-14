@@ -1,9 +1,9 @@
-name: github-actions
+name: Pages
 
 on:
   push:
     branches:
-      - main
+      - main # default branch
 
 jobs:
   build:
