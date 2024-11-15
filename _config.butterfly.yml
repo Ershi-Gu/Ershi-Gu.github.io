@@ -65,7 +65,7 @@ disable_top_img: false
 default_top_img:
 
 # The banner image of index page
-index_img:
+index_img: https://pic.netbian.com/uploads/allimg/241112/234250-1731426170ef0d.jpg
 
 # The banner image of archive page
 archive_img:
@@ -191,7 +191,7 @@ index_post_content:
 toc:
   post: true
   page: false
-  number: true
+  number: false
   expand: false
   # Only for post
   style_simple: false
