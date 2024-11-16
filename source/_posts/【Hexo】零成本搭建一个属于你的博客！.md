@@ -3,6 +3,7 @@ layout: hexo
 title: 【Hexo】 零成本搭建一个属于你的博客！
 date: 2024-11-15 20:31:28
 tags: 博客
+cover: https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/hexoblog_index.svg
 ---
 
 # 前言
