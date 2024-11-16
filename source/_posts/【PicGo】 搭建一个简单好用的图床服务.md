@@ -1,7 +1,11 @@
 ---
 title: 【PicGo】 搭建一个简单好用的图床服务
 date: 2024-11-16 10:40:12
-tags: 技能
+tags: 
+  - PicGo
+  - 图床
+  - COS
+categories: 技术
 ---
 
 # 前言
