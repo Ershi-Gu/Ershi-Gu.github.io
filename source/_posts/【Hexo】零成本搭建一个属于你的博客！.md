@@ -1,11 +1,11 @@
 ---
 layout: hexo
-title: 用 Hexo 零成本搭建一个属于你的博客！
+title: 【Hexo】 零成本搭建一个属于你的博客！
 date: 2024-11-15 20:31:28
 tags: 博客
 ---
 
-# 1. 前言
+# 前言
 
 本系列记录从 0 开始搭建一个博客的过程，低代码、零成本，是一款适合小白选择的方案。
 
@@ -34,9 +34,9 @@ tags: 博客
 
 
 
-# 2. Hexo 搭建
+# Hexo 搭建
 
-## 2.1 安装 Node.js 和 Git
+## 安装 Node.js 和 Git
 
 Hexo 基于 Node.js 环境，所以需要先进行一下安装。
 
@@ -52,7 +52,7 @@ Git 安装：Git 是一个版本控制工具，可以用来拉去别人的代码
 
 
 
-## 2.2 安装 Hexo
+## 安装 Hexo
 
 Hexo 官网：[Hexo](https://hexo.io/zh-cn/)。
 
@@ -76,7 +76,7 @@ hexo -v
 
 
 
-## 2.3 初始化建站
+## 初始化建站
 
 安装 Hexo 完成后，在前面建立的文件夹下（Hello-Blog）执行下面的命令，将会进行框架的初始化建立：
 
@@ -109,7 +109,7 @@ hexo s # 启动本地服务器
 
 
 
-# 3. GitHub 部署站点
+# GitHub 部署站点
 
 上一节我们已经在本地建设博客成功了，这一节会通过 GitHub pages 实现网站的在线访问。
 
@@ -117,7 +117,7 @@ hexo s # 启动本地服务器
 
 
 
-## 3.1 创建个人仓库
+## 创建个人仓库
 
 在创建该项目仓库时，需要注意仓库名必须按照 **`用户名.github.io`** 的形式才能自动将该仓库的文件托管到 GitHub Pages，同时需要注意免费账户**仓库需要公开**。
 
@@ -125,7 +125,7 @@ hexo s # 启动本地服务器
 
 
 
-## 3.2 部署 Hexo 到 GitHub
+## 部署 Hexo 到 GitHub
 
 这一步，就是需要将本地的 Hexo 文件和 GitHub 关联起来。
 
@@ -178,7 +178,7 @@ git push -u 仓库名(自己写一个，就是用于记录远程仓库的名字�
 
 
 
-## 3.3 创建 Workflow
+## 创建 Workflow
 
 我们在刚刚创建的仓库中，选中设置，进入 Pages 选项，选择构建和部署方式为 GitHub Actions，创建 workflow。如下图：
 
@@ -253,7 +253,7 @@ jobs:
 
 
 
-## 3.4 后续操作
+## 后续操作
 
 在完成上面操作后，我们就可以通过 **`用户名.github.io`** 访问到项目啦。
 
@@ -261,19 +261,19 @@ jobs:
 
 
 
-# 4. Hexo 基本配置
+# Hexo 基本配置
 
 可以在根目录的 **`_config.yml`** 中修改大部分的网站配置。具体配置参考官方文档：[配置 | Hexo](https://hexo.io/zh-cn/docs/configuration)。
 
 
 
-# 5. Hexo 主题更换
+# Hexo 主题更换
 
-## 5.1 主题选择
+## 主题选择
 
 接下来就到了最喜欢的部分了，谁不喜欢把自己的网站打扮的 very 好看呢。
 
-[Themes | Hexo](https://hexo.io/themes/)：Hexo 提供了第三方的主题网站，可以在里面选择自己喜欢的主题进行稍后的部署。或者直接去 GitHub 搜索关键词 **Hexo Theme** 也可以。（*比如下面的 GitHub start 前三的主题*）
+[Themes | Hexo](https://hexo.io/themes/)：Hexo 提供了第三方的主题网站，可以在里面选择自己喜欢的主题进行稍后的部署。或者直接去 GitHub 搜索关键词 **Hexo Theme** 也可以。（*比如下面的 GitHub star 前三的主题*）
 
 ![image-20241116004201157](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/image-20241116004201157.png)
 
@@ -281,7 +281,7 @@ jobs:
 
 
 
-## 5.2 ButterFly 主题安装
+## ButterFly 主题安装
 
 （1）拉取主题文件
 
@@ -333,7 +333,7 @@ Hexo 会自动合并主题中的 `_config.yml`  和 `_config.butterfly.yml`  里
 
 
 
-## 5.3 常见问题
+## 常见问题
 
 **（1）git 不了 themes 文件中的主题文件**
 
