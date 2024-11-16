@@ -17,7 +17,6 @@ nav:
   fixed: false
 
 menu:
-  搜索: /search/ || fas fa-magnifying-glass
   首页: / || fas fa-home
   页面||fas fa-compass:
     归档: /archives/ || fas fa-box-archive
@@ -472,7 +471,7 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: algolia_search
   placeholder:
 
   # Algolia Search
