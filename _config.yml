@@ -106,8 +106,8 @@ deploy:
 # Plugns
 algolia:
   appId: "QWTN7C6P0O"
-  apiKey: "d13772f8232a930ee8b74f43bce523ab"
-  adminApiKey: "e13a0d9d7ac31e38e96e2ea53ad33c4b"
+  apiKey: ${ALGOLIA_API_KEY}
+  adminApiKey: ${ALGOLIA_ADMIN_API_KEY}
   chunkSize: 5000
   indexName: "Hello-Life"
   fields:
