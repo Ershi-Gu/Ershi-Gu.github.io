@@ -641,7 +641,7 @@ remark42:
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
-  server: 'http://artalk.guershi.cn'
+  server: 'https://artalk.guershi.cn'
   site: 'Hello-Life'
   # Use Artalk visitor count as the page view count
   visitor: false
