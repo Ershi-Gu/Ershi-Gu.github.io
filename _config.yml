@@ -119,3 +119,14 @@ algolia:
     - slug
     - tags
     - title
+
+# Artitalk
+# see https://artitalk.js.org/
+artitalk:
+  enable: true
+  appId: qrxq5PKQYFbO3a3TPRlPMml1-MdYXbMMI
+  appKey: ${LEANCLOUD_API_KEY}
+  path: shuoshuo
+  js:
+  option:
+  front_matter:
