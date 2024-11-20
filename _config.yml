@@ -125,8 +125,14 @@ algolia:
 artitalk:
   enable: true
   appId: qrxq5PKQYFbO3a3TPRlPMml1-MdYXbMMI
-  appKey: VipIx9bLdTQmF4hpiNfBn1a2
+  appKey: ${LEANCLOUD_API_KEY}
   path: talking
-  js:
+  js: https://unpkg.com/aligu_artitalk@1.0.10/artitalk_aligu.js
   option:
+    pageSize: 10 
+    # atComment: 0  # 是否可评论
+    atEmoji:  
+    color1: 'linear-gradient(60deg, #ffd7e4 0, #c8f1ff 93%)'  # 说说背景色1（默认是橙色）
+    color2: 'linear-gradient(60deg, #ffd7e4 0, #c8f1ff 93%)'  # 说说背景色2（默认是绿色）
+    color3: '#4c4948'  # 说说文字内容颜色（默认是白色）
   front_matter:
