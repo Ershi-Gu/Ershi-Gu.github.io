@@ -126,7 +126,7 @@ artitalk:
   enable: true
   appId: qrxq5PKQYFbO3a3TPRlPMml1-MdYXbMMI
   appKey: ${LEANCLOUD_API_KEY}
-  path: shuoshuo
+  path: talking
   js:
   option:
   front_matter:
