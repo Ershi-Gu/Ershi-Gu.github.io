@@ -39,6 +39,7 @@ jobs:
         env:
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+          LEANCLOUD_API_KEY: ${{ secrets.LEANCLOUD_API_KEY }}
         run: npm run build
 
       # Step 6: 上传构建成果
