@@ -24,7 +24,8 @@ menu:
     分类: /categories/ || fas fa-folder-open
     图库: /gallery/ || fas fa-image
     导航: /navigation/ || fas fa-location-dot
-  留言: /talking/ || fas fa-comment-dots
+  留言: /messageboard/ || fas fa-comment-dots
+  朋友圈: /talking/ 
 
 # --------------------------------------
 # Code Blocks Settings
