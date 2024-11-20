@@ -125,7 +125,7 @@ algolia:
 artitalk:
   enable: true
   appId: qrxq5PKQYFbO3a3TPRlPMml1-MdYXbMMI
-  appKey: ${LEANCLOUD_API_KEY}
+  appKey: VipIx9bLdTQmF4hpiNfBn1a2
   path: talking
   js:
   option:
