@@ -26,6 +26,7 @@ menu:
     导航: /navigation/ || fas fa-location-dot
   留言: /messageboard/ || fas fa-comment-dots
   说说: /talking/ || fas fa-fire
+  日志: /timeline/ || fas fa-book
 
 # --------------------------------------
 # Code Blocks Settings
@@ -96,7 +97,7 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background: url(https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/background_img.png)
+background: 
 
 cover:
   # Disable the cover or not
