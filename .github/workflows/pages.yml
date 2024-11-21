@@ -34,15 +34,26 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Step 5: 构建（传递 Algolia 的 API Key）
-      - name: Build
+      # Step 5: 安装 Hexo 和 Algolia 插件
+      - name: Install Hexo and Algolia Plugins
+        run: |
+          npm install hexo-cli
+          npm install hexo-algoliasearch
+
+      # Step 6: 生成静态文件并上传到 Algolia
+      - name: Generate and Upload to Algolia
         env:
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
-          LEANCLOUD_API_KEY: ${{ secrets.LEANCLOUD_API_KEY }}
+        run: |
+          npx hexo generate
+          npx hexo algolia -n
+
+      # Step 7: 构建（正常构建过程）
+      - name: Build
         run: npm run build
 
-      # Step 6: 上传构建成果
+      # Step 8: 上传构建成果
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
