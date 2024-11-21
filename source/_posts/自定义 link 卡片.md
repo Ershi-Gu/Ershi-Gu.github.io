@@ -2,7 +2,7 @@
 title: 自定义 link 卡片
 date: 2024-11-20 22:52:32
 tags: link
-categories: 建站日记
+categories: 建站日志
 cover: https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/link_img.png
 ---
 
