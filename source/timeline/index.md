@@ -7,6 +7,12 @@ comments: false
 
 {% timeline 2024 %}
 
+<!-- timeline 12-01 -->
+
+1、修改网站样式为一图流背景
+
+<!-- endtimeline -->
+
 <!-- timeline 11-21 -->
 
 1、新增 {% label 建站日志timeline orange %}
