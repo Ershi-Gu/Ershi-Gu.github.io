@@ -34,3 +34,9 @@ block content
       - var commentsJsLoad = true
       !=partial('includes/third-party/comments/index', {}, {cache: true})
       
+    if top_img === false
+      include includes/header/post-info.pug
+    .top-img.gist(style=`background-image: url(${url_for(top_img)})`)
+    article#article-container.post-content!=page.content
+
+      
