@@ -7,6 +7,12 @@ comments: false
 
 {% timeline 2024 %}
 
+<!-- timeline 12-02 -->
+
+1、添加 {% label 标题前iocn图标 orange %}
+
+<!-- endtimeline -->
+
 <!-- timeline 12-01 -->
 
 1、修改网站样式为一图流背景
