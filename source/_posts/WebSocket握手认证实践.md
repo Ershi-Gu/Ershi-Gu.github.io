@@ -23,7 +23,7 @@ WebSocket 是一种全双工通信协议，它允许客户端和服务器之间�
 
 现在设想这样一个场景，用户登录使用在线聊天软件时，通常使用 WebSocket 连接建立通道实现”客户端-服务器“双向通信，而通道在登录后会标识其为哪个用户。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733145277024-164ac567-f5e1-4c29-ba71-8a9f2cbe9136.png)
+![img](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733145277024-164ac567-f5e1-4c29-ba71-8a9f2cbe9136.png)
 
 但用户可能刷新前端，websocket 连接就重建了，这时难道用户需要再次登录么，很麻烦对吧。所以需要携带一个登录凭证，在后续的操作中，根据登录凭证（Token）就能重建连接并进行身份验证。我们需要知道的是每个 channel 对应的用户是谁。
 
@@ -31,7 +31,7 @@ WebSocket 是一种全双工通信协议，它允许客户端和服务器之间�
 
 # 传统方案
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733189844847-e87e2d73-7571-4f2a-816d-1dd2df0b94b5.png)
+![](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733189844847-e87e2d73-7571-4f2a-816d-1dd2df0b94b5.png)
 
 通常情况下，首先想到的可能是会把登录认证和建立 websocket 连接分开来，但这样一来一回需要三次请求，可能会提高前端反馈延迟。而第一步和第二步能否合并在一起呢，在 websocket 的建立阶段进行认证。
 
@@ -43,7 +43,7 @@ WebSocket 是一种全双工通信协议，它允许客户端和服务器之间�
 
 前端发送 websocket 请求的时候有哪些机会可以携带参数呢？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733190265457-1165619b-8117-4fbe-a5b0-6480e045f8cd.png)
+![](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733190265457-1165619b-8117-4fbe-a5b0-6480e045f8cd.png)
 
 1. 如果是常规 http 请求，可以在请求头中自定义属性，但原生的 websocket 在请求时好像无法添加请求头。
 2. 将 token 拼接在 url 后作为参数进行传递。
@@ -59,17 +59,17 @@ WebSocket 是一种全双工通信协议，它允许客户端和服务器之间�
 
 通过查看源码和查询资料发现，Netty 握手认证在 `io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandshakeHandler` 中实现。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733191344879-d2192b5e-ae1c-436a-9a8f-4bf6481acf3c.png)
+![](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733191344879-d2192b5e-ae1c-436a-9a8f-4bf6481acf3c.png)
 
 那这个 `protocols` 在服务端哪里设置呢，可以看到它是在构建握手处理器的地方填写的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733191634776-e016dd83-f77c-4b50-9f64-f850166fa46d.png)
+![](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733191634776-e016dd83-f77c-4b50-9f64-f850166fa46d.png)
 
 那么就有个疑问了，Netty 既没开放 `protocols` 的处理，服务端对比参数时又只能写死。再联想 `protocols`本身就是协议的意思，应该是双方规定好的一些东西，我们拿来传 token，那这条路可能就错了。
 
-_当然也不是没有办法，我们只需要将 _`_WebSocketServerProtocolHandshakeHandler_`_ 的握手过程全部重写一边即可，不过太麻烦了对吧，一看就不符合 Netty 的设计理念。_
+_当然也不是没有办法，我们只需要将 _`_WebSocketServerProtocolHandshakeHandler_`_ 的握手过程全部重写一边即可，不过太麻烦了对吧，一看就不符合 Netty 的设计理念。
 
-__
+
 
 ## url 传参
 
@@ -77,7 +77,7 @@ __
 
 首先通过 `pipeline` 在ws握手处理器之前添加一个自定的处理器：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/40412251/1733194681207-bcb397f1-de97-4b85-9b70-6ab05ca202e4.png)
+![](https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/1733194681207-bcb397f1-de97-4b85-9b70-6ab05ca202e4.png)
 
 该处理器只能需要处理接收到的数据即可，具体代码如下：
 
@@ -123,6 +123,8 @@ public class HttpHeaderHandler extends ChannelInboundHandlerAdapter {
 `pipeline.addLast(new WebSocketServerProtocolHandler("/"));`
 
 _ps：http url 有长度限制，不过一般 token 不会超过这个限制。_
+
+
 
 # 总结
 
