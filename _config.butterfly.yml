@@ -71,7 +71,7 @@ disable_top_img: false
 default_top_img:
 
 # The banner image of index page
-index_img: https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/index_img.png
+index_img: https://hello-life-1313120530.cos.ap-nanjing.myqcloud.com/blog/index_top_img3.png
 
 # The banner image of archive page
 archive_img:
@@ -93,7 +93,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: true
 
 # Website Background
 # Can set it to color or image url
