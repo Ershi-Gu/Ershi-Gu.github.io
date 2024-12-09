@@ -1039,7 +1039,6 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="/css/transpancy.css">
   bottom:
     # - <script src="xxxx"></script>
 
