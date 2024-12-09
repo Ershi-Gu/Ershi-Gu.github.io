@@ -6,6 +6,13 @@ comments: false
 ---
 
 {% timeline 2024 %}
+
+<!-- timeline 12-09 -->
+
+1、修改网站背景为初始白色，更简洁
+
+<!-- endtimeline -->
+
 <!-- timeline 12-02 -->
 
 1、添加 {% label 标题前iocn图标 orange %}
