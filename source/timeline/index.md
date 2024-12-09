@@ -11,6 +11,10 @@ comments: false
 
 1、修改网站背景为初始白色，更简洁
 
+2、修改侧边栏到左侧
+
+3、修改网站字号14px
+
 <!-- endtimeline -->
 
 <!-- timeline 12-02 -->
